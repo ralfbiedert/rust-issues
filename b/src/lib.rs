@@ -13,5 +13,8 @@ mod c {
 pub struct B {}
 
 impl AsRef<String> for B { fn as_ref(&self) -> &String { unimplemented!() }}
-impl AsRef<<a::A as Numbered<0>>::T> for B { fn as_ref( & self ) -> &<a::A as Numbered<0>>::T { unimplemented!() }}
-impl AsRef<<c::A as Numbered<0>>::T> for B { fn as_ref( & self ) -> &<c::A as Numbered<0>>::T { unimplemented!() }}
+
+// The `a::A` line doesn't work, but the `c::A` line does. Why?! Both modules are identical!
+//
+// impl AsRef<<a::A as Numbered<0>>::T> for B { fn as_ref( & self ) -> &<a::A as Numbered<0>>::T { unimplemented!() }}
+// impl AsRef<<c::A as Numbered<0>>::T> for B { fn as_ref( & self ) -> &<c::A as Numbered<0>>::T { unimplemented!() }}
