@@ -1,0 +1,11 @@
+[package]
+name = "b"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+common = { path = "../common" }
+
+[lib]
+name = "b"
+path = "src/lib.rs"
