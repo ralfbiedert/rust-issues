@@ -1,3 +1,4 @@
-pub fn hello_from_common() {
-    println!("Hello from common crate!");
+
+pub trait Numbered<const N: usize> {
+    type T;
 }

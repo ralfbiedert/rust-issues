@@ -5,6 +5,7 @@ edition.workspace = true
 
 [dependencies]
 common = { path = "../common" }
+a = { path = "../a" }
 
 [lib]
 name = "b"

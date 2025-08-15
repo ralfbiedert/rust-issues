@@ -1,6 +1,7 @@
-use common::hello_from_common;
+use common::Numbered;
 
-pub fn hello_from_a() {
-    println!("Hello from crate A!");
-    hello_from_common();
-}
+pub struct AA;
+pub struct A {}
+
+impl Numbered<0> for A { type T = AA; }
+
